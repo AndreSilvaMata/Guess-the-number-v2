@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: 'Silkscreen', cursive;
+}
+
+:root {
+  --bg-dark: #222;
+  --bg-light: #e8e4e0;
+
+  --box-color-one: #a7c0c6;
+  --box-color-two: #475457;
+
+  --bg-winning: #6dd9b0;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--font-color-dark);
+}
+
+.container-one {
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.container-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  margin-top: 30px;
+}
+
+main {
+  width: 650px;
+  margin: 70px auto 0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding: 5rem 0;
+
+  background-color: var(--box-color-two);
+  color: var(--bg-light);
+}
+
+.btn {
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .3s;
+  border: 5px solid var(--bg-dark);
+}
+
+.btn.check {
+  color: var(--bg-light);
+  border: 5px solid var(--bg-light);
+}
+
+.btn:hover {
+  background-color: var(--box-color-one)
+}
+
+.btn.check:hover {
+  background-color: var(--bg-winning);
+  color: var(--bg-dark);
+}
+
+.number {
+  font-size: 4rem;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.guess {
+  padding: .5rem;
+  font-size: 1.45rem;
+}
+
+.right p {
+  font-size: 1.2rem;
+}
+
+.label-score {
+  padding: 1rem;
+}
+
+.container-one p {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 767px) {
+  .container-one {
+    flex-direction: column;
+  }
+  .container-one p {
+    font-size: 1.3rem;
+  }
+  .left {
+    flex-direction: column;
+  }
+  main {
+    width: 80%;
+  }
+}
+@media (max-width: 575px) {
+  main {
+    width: 80%;
+  }
+  .guess {
+    width: 75%;
+  }
+  .container-one h1 {
+    text-align: center;
+  }
+
+}
+@media (max-width: 490px) {
+  .number {
+    width: 7rem;
+  }
+
+}
+
